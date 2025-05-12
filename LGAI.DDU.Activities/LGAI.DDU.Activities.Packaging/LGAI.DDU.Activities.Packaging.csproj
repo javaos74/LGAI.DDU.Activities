@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<VersionBuild>$([System.DateTime]::UtcNow.DayOfYear.ToString("F0"))</VersionBuild>
+		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("F0"))</VersionRevision>
+		<PackageId>LGAI.DDU.Activities</PackageId>
+		<VersionPrefix Condition="'$(Configuration)' == 'Release'">0.0.1</VersionPrefix>
+		<VersionPrefix Condition="'$(Configuration)' == 'Debug'">0.0.0.$(VersionBuild)-dev.$(VersionRevision)</VersionPrefix>
+		<Authors>Charles Kim</Authors>
+    <PackageDescription>LG AI Research DDU Activities</PackageDescription>
+		<PackageTags>LGAI;DDU;UiPath</PackageTags>
+		<Product>LGAI.DDU.Activities.Packaging</Product>
+		<PackageIconUrl>https://download.uipath.com/UI_icon.png?web</PackageIconUrl>
+		<PackageOutputPath>..\Output\Activities\Packages\</PackageOutputPath>
+		<TargetsForTfmSpecificBuildOutput>AddDlls</TargetsForTfmSpecificBuildOutput>
+		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+	</PropertyGroup>
+
+	<Target Name="AddDlls">
+		<!-- PDBs for debug-->
+		<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+			<BuildOutputInPackage Include="$(OutputPath)LGAI.DDU.Activities.pdb" />
+		</ItemGroup>
+		<ItemGroup>
+			<BuildOutputInPackage Include="$(OutputPath)LGAI.DDU.Activities.dll" />
+      <BuildOutputInPackage Include="$(OutputPath)ko\LGAI.DDU.Activities.resources.dll" TargetPath="ko\LGAI.DDU.Activities.resources.dll"/>
+		</ItemGroup>
+	</Target>
+
+	<Target Name="RemoveMetaDll" AfterTargets="BuiltProjectOutputGroup">
+		<ItemGroup>
+			<BuiltProjectOutputGroupOutput Remove="@(BuiltProjectOutputGroupOutput)" />
+		</ItemGroup>
+	</Target>
+	
+	<Target Name="CleanPackageFiles" BeforeTargets="Build">
+		<Message Text="Deleting packages ..." />
+		<ItemGroup>
+			<PackageFilesToDelete Include="$(PackageOutputPath)\$(PackageId)*.nupkg" />
+		</ItemGroup>
+		<Delete Files="@(PackageFilesToDelete)" ContinueOnError="WarnAndContinue" />
+	</Target>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\LGAI.DDU.Activities\LGAI.DDU.Activities.csproj">
+			<PrivateAssets>All</PrivateAssets>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

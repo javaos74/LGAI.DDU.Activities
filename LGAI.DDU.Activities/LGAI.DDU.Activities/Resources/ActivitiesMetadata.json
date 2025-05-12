@@ -1,0 +1,114 @@
+{
+  "resourceManagerName": "LGAI.DDU.Activities.Resources.Resources",
+  "activities": [
+    {
+      "fullName": "LGAI.DDU.Activities.AnalyzeDocument",
+      "shortName": "AnalyzeDocument",
+      "displayNameKey": "AnalyzeDocument_DisplayName",
+      "descriptionKey": "AnalyzeDocument_Description",
+      "categoryKey": "LG AI DDU",
+      "viewModelType": "LGAI.DDU.Activities.ViewModels.AnalyzeDocumentViewModel",
+      "Properties": [
+        {
+          "Name": "Endpoint",
+          "DisplayNameKey": "DDU_Endpoint",
+          "TooltipKey": "DDU_Endpoint_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Login"
+          }
+        },
+        {
+          "Name": "ApiKey",
+          "DisplayNameKey": "DDU_APIKEY",
+          "TooltipKey": "DDU_APIKEY_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Login"
+          }
+        },
+        {
+          "Name": "ExtractMolecule",
+          "DisplayNameKey": "DDU_ExtractMolecule",
+          "TooltipKey": "DDU_ExtractMolecule_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "ExtractTable",
+          "DisplayNameKey": "DDU_ExtractTable",
+          "TooltipKey": "DDU_ExtractTable_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "ExtractReaction",
+          "DisplayNameKey": "DDU_ExtractReaction",
+          "TooltipKey": "DDU_ExtractReaction_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "ExtractChart",
+          "DisplayNameKey": "DDU_ExtractChart",
+          "TooltipKey": "DDU_ExtractChart_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "InputFile",
+          "DisplayNameKey": "DDU_InputFIlePath",
+          "TooltipKey": "DDU_InputFilePath_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "ErrorMessage",
+          "DisplayNameKey": "DDU_ErrorMessage",
+          "TooltipKey": "DDU_ErrorMessage_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        },
+        {
+          "Name": "Result",
+          "DisplayNameKey": "DDU_Result",
+          "TooltipKey": "DDU_Result_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        }
+      ]
+    }
+  ]
+}
