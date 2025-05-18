@@ -87,6 +87,28 @@
           }
         },
         {
+          "Name": "WaitResult",
+          "DisplayNameKey": "DDU_WaitResult",
+          "TooltipKey": "DDU_WaitResult_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
+          "Name": "ErrorCode",
+          "DisplayNameKey": "DDU_ErrorCode",
+          "TooltipKey": "DDU_ErrorCode_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        },
+        {
           "Name": "ErrorMessage",
           "DisplayNameKey": "DDU_ErrorMessage",
           "TooltipKey": "DDU_ErrorMessage_Tip",
@@ -98,11 +120,98 @@
           }
         },
         {
+          "Name": "RequestId",
+          "DisplayNameKey": "DDU_RequestId",
+          "TooltipKey": "DDU_RequestId_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        },
+        {
+          "Name": "WaitSeconds",
+          "DisplayNameKey": "DDU_WaitSeconds",
+          "TooltipKey": "DDU_WaitSeconds",
+          "IsRequired": true,
+          "IsPrincipal": false,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        },
+        {
+          "Name": "Result",
+          "DisplayNameKey": "DDU_Result",
+          "TooltipKey": "DDU_Result_Tip",
+          "IsRequired": false,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        }
+      ]
+    },
+    {
+      "fullName": "LGAI.DDU.Activities.GetResult",
+      "shortName": "Get Analyzed Result",
+      "displayNameKey": "GetResult_DisplayName",
+      "descriptionKey": "GetResult_Description",
+      "categoryKey": "LG AI DDU",
+      "viewModelType": "LGAI.DDU.Activities.ViewModels.GetResultViewModel",
+      "Properties": [
+        {
+          "Name": "Endpoint",
+          "DisplayNameKey": "DDU_Endpoint",
+          "TooltipKey": "DDU_Endpoint_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Login"
+          }
+        },
+        {
+          "Name": "ApiKey",
+          "DisplayNameKey": "DDU_APIKEY",
+          "TooltipKey": "DDU_APIKEY_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Login"
+          }
+        },
+        {
+          "Name": "RequestId",
+          "DisplayNameKey": "DDU_RequestId",
+          "TooltipKey": "DDU_RequestId_Tip",
+          "IsRequired": true,
+          "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Input"
+          }
+        },
+        {
           "Name": "Result",
           "DisplayNameKey": "DDU_Result",
           "TooltipKey": "DDU_Result_Tip",
           "IsRequired": true,
           "IsPrincipal": true,
+          "IsVisible": true,
+          "Category": {
+            "DisplayNameKey": "Output"
+          }
+        },
+        {
+          "Name": "ErrorMessage",
+          "DisplayNameKey": "DDU_ErrorMessage",
+          "TooltipKey": "DDU_ErrorMessage_Tip",
+          "IsRequired": false,
+          "IsPrincipal": false,
           "IsVisible": true,
           "Category": {
             "DisplayNameKey": "Output"

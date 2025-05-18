@@ -17,7 +17,7 @@
     <PackageDescription>LG AI Research DDU Activities</PackageDescription>
 		<PackageTags>LGAI;DDU;UiPath</PackageTags>
 		<Product>LGAI.DDU.Activities.Packaging</Product>
-		<PackageIconUrl>https://download.uipath.com/UI_icon.png?web</PackageIconUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/javaos74/LGAIResearch.Activities/refs/heads/main/UiPath.LGAIResearch/LG_logo_(2014).svg</PackageIconUrl>
 		<PackageOutputPath>..\Output\Activities\Packages\</PackageOutputPath>
 		<TargetsForTfmSpecificBuildOutput>AddDlls</TargetsForTfmSpecificBuildOutput>
 		<ProduceReferenceAssembly>False</ProduceReferenceAssembly>
@@ -38,8 +38,28 @@
 		<ItemGroup>
 			<BuiltProjectOutputGroupOutput Remove="@(BuiltProjectOutputGroupOutput)" />
 		</ItemGroup>
+    
 	</Target>
-	
+
+  <Target Name="CopyNugetPackageToCustomFolder" AfterTargets="Pack">
+    <PropertyGroup>
+      <NugetDestinationFolder>C:\Packages</NugetDestinationFolder>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <NugetSourceFile>$(PackageOutputPath)$(PackageId).$(VersionPrefix).nupkg</NugetSourceFile>
+    </PropertyGroup>
+
+    <Message Text="Nuget 복사 대상 폴더: $(NugetDestinationFolder)" Importance="high" />
+    <Message Text="복사할 Nuget 파일: $(NugetSourceFile)" Importance="high" />
+
+    <Copy
+      SourceFiles="$(NugetSourceFile)"
+      DestinationFolder="$(NugetDestinationFolder)"
+      SkipUnchangedFiles="true"
+      Condition="Exists('$(NugetSourceFile)')" />
+  </Target>
+  
 	<Target Name="CleanPackageFiles" BeforeTargets="Build">
 		<Message Text="Deleting packages ..." />
 		<ItemGroup>

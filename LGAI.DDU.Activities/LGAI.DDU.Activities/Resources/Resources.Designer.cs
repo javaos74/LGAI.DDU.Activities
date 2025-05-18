@@ -223,6 +223,24 @@ namespace LGAI.DDU.Activities {
         }
         
         /// <summary>
+        ///   Request Id과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_RequestId {
+            get {
+                return ResourceManager.GetString("DDU_RequestId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Request Id과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_RequestId_Tip {
+            get {
+                return ResourceManager.GetString("DDU_RequestId_Tip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   DDU Result 과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string DDU_Result {
@@ -237,6 +255,60 @@ namespace LGAI.DDU.Activities {
         public static string DDU_Result_Tip {
             get {
                 return ResourceManager.GetString("DDU_Result_Tip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Flag for waiting result과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_WaitResult {
+            get {
+                return ResourceManager.GetString("DDU_WaitResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If On the it returns DDUResult otherwise return RequestId 과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_WaitResult_Tip {
+            get {
+                return ResourceManager.GetString("DDU_WaitResult_Tip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Processing time(in seconds)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_WaitSeconds {
+            get {
+                return ResourceManager.GetString("DDU_WaitSeconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Processing time (in seconds)과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string DDU_WaitSeconds_Tip {
+            get {
+                return ResourceManager.GetString("DDU_WaitSeconds_Tip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Get Result with requestId과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string GetResult_Description {
+            get {
+                return ResourceManager.GetString("GetResult_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Get Result과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        public static string GetResult_DisplayName {
+            get {
+                return ResourceManager.GetString("GetResult_DisplayName", resourceCulture);
             }
         }
     }

@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AnalyzeDocument_Description" xml:space="preserve">
-    <value>DDU를 활용한 문서 분석</value>
+    <value>DDU를 활용한 문서 분석 요청</value>
     <comment>activity description</comment>
   </data>
   <data name="AnalyzeDocument_DisplayName" xml:space="preserve">
-    <value>DDU 문서 분석 </value>
+    <value>문서 분석  요청</value>
     <comment>activity name</comment>
   </data>
   <data name="DDU_APIKEY" xml:space="preserve">
@@ -173,10 +173,34 @@
   <data name="DDU_InputFIlePath_Tip" xml:space="preserve">
     <value>일력 파일 리소스 (PDF, JPG, PNG)</value>
   </data>
+  <data name="DDU_RequestId" xml:space="preserve">
+    <value>요청 식별자</value>
+  </data>
+  <data name="DDU_RequestId_Tip" xml:space="preserve">
+    <value>요청 식별자</value>
+  </data>
   <data name="DDU_Result" xml:space="preserve">
     <value>문서 분석 결과</value>
   </data>
   <data name="DDU_Result_Tip" xml:space="preserve">
     <value>문서 분석 결과 (화학식,반응식,표,차트 포함)</value>
+  </data>
+  <data name="DDU_WaitResult" xml:space="preserve">
+    <value>전체 결과 대기 여부</value>
+  </data>
+  <data name="DDU_WaitResult_Tip" xml:space="preserve">
+    <value>전체 결과 대기시 DDUResult를 결과로 받게 되지만 그렇지 않는 경우 분석 결과 요청을 따로 호출 해야 함. </value>
+  </data>
+  <data name="DDU_WaitSeconds" xml:space="preserve">
+    <value>예상 소요시간 (초)</value>
+  </data>
+  <data name="DDU_WaitSeconds_Tip" xml:space="preserve">
+    <value>예상 소요시간 (초)</value>
+  </data>
+  <data name="GetResult_Description" xml:space="preserve">
+    <value>분석 결과 요청</value>
+  </data>
+  <data name="GetResult_DisplayName" xml:space="preserve">
+    <value>분석 결과 요청</value>
   </data>
 </root>

@@ -7,25 +7,19 @@ using Microsoft.CodeAnalysis.Emit;
 
 namespace LGAI.DDU.Activities.ViewModels
 {
-    public class AnalyzeDocumentViewModel : DesignPropertiesViewModel
+    public class GetResultViewModel : DesignPropertiesViewModel
     {
         /*
          * The result property comes from the activity's base class
          */
         public DesignInArgument<string> Endpoint { get; set; }
         public DesignInArgument<string> ApiKey { get; set; }
-        public DesignInArgument<IResource> InputFile { get; set; }
-        public DesignInArgument<OnOff> WaitResult { get; set; }
-        public DesignInArgument<OnOff> ExtractMolecule { get; set; }
-        public DesignInArgument<OnOff> ExtractTable { get; set; }
-        public DesignInArgument<OnOff> ExtractChart { get; set; }
-        public DesignInArgument<OnOff> ExtractReaction { get; set; }
         public DesignOutArgument<string> ErrorMessage { get; set; }
-        public DesignOutArgument<string> RequestId { get; set; }
+        public DesignInArgument<string> RequestId { get; set; }
         public DesignOutArgument<DDUResult> Result { get; set; }
-        public DesignOutArgument<int> WaitSeconds { get; set; }
 
-        public AnalyzeDocumentViewModel(IDesignServices services) : base(services)
+
+        public GetResultViewModel(IDesignServices services) : base(services)
         {
         }
 
@@ -40,15 +34,8 @@ namespace LGAI.DDU.Activities.ViewModels
             int propertyOrderIndex = 1;
             Endpoint.OrderIndex = propertyOrderIndex++;
             ApiKey.OrderIndex = propertyOrderIndex++;
-            InputFile.OrderIndex = propertyOrderIndex++;
-            WaitResult.OrderIndex = propertyOrderIndex++;   
-            ExtractMolecule.OrderIndex = propertyOrderIndex++;
-            ExtractReaction.OrderIndex = propertyOrderIndex++;
-            ExtractTable.OrderIndex = propertyOrderIndex++;
-            ExtractChart.OrderIndex = propertyOrderIndex++;
-            Result.OrderIndex = propertyOrderIndex++;
             RequestId.OrderIndex = propertyOrderIndex++;
-            WaitSeconds.OrderIndex = propertyOrderIndex++;
+            Result.OrderIndex = propertyOrderIndex++;
             ErrorMessage.OrderIndex = propertyOrderIndex++;
         }
     }

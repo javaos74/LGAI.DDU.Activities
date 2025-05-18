@@ -173,10 +173,34 @@
   <data name="DDU_InputFIlePath_Tip" xml:space="preserve">
     <value>Input Document Resource</value>
   </data>
+  <data name="DDU_RequestId" xml:space="preserve">
+    <value>Request Id</value>
+  </data>
+  <data name="DDU_RequestId_Tip" xml:space="preserve">
+    <value>Request Id</value>
+  </data>
   <data name="DDU_Result" xml:space="preserve">
     <value>DDU Result </value>
   </data>
   <data name="DDU_Result_Tip" xml:space="preserve">
     <value>Result from DDU </value>
+  </data>
+  <data name="DDU_WaitResult" xml:space="preserve">
+    <value>Flag for waiting result</value>
+  </data>
+  <data name="DDU_WaitResult_Tip" xml:space="preserve">
+    <value>If On the it returns DDUResult otherwise return RequestId </value>
+  </data>
+  <data name="DDU_WaitSeconds" xml:space="preserve">
+    <value>Processing time(in seconds)</value>
+  </data>
+  <data name="DDU_WaitSeconds_Tip" xml:space="preserve">
+    <value>Processing time (in seconds)</value>
+  </data>
+  <data name="GetResult_Description" xml:space="preserve">
+    <value>Get Result with requestId</value>
+  </data>
+  <data name="GetResult_DisplayName" xml:space="preserve">
+    <value>Get Result</value>
   </data>
 </root>
